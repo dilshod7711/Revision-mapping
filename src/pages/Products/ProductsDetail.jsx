@@ -48,7 +48,6 @@ const ProductsDetail = () => {
           </p>
           <p className="text-xs text-gray-400">{data.warrantyInformation}</p>
 
-          {/* Buttons */}
           <div className="flex gap-4 mt-4">
             <button className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition font-semibold">
               <ShoppingCart size={20} />

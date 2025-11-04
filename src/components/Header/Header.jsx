@@ -6,12 +6,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
-        {/* Logo */}
         <h1 className="text-2xl font-extrabold text-indigo-700 tracking-wide">
           <span className="text-purple-600">My</span>Store
         </h1>
 
-        {/* Nav Links */}
         <nav className="hidden md:flex items-center gap-8">
           <NavLink
             to="/"
@@ -48,9 +46,7 @@ const Header = () => {
           </NavLink>
         </nav>
 
-        {/* Right Section */}
         <div className="flex items-center gap-4">
-          {/* Like Button */}
           <button className="relative group">
             <Heart className="text-gray-700 hover:text-red-600 transition" />
             <span className="absolute -top-1 -right-2 bg-red-600 text-white text-xs px-1.5 rounded-full group-hover:scale-110 transition">
@@ -58,7 +54,6 @@ const Header = () => {
             </span>
           </button>
 
-          {/* Cart Button */}
           <button className="relative group">
             <ShoppingCart className="text-gray-700 hover:text-indigo-600 transition" />
             <span className="absolute -top-1 -right-2 bg-indigo-600 text-white text-xs px-1.5 rounded-full group-hover:scale-110 transition">
@@ -66,7 +61,6 @@ const Header = () => {
             </span>
           </button>
 
-          {/* User Icon */}
           <button className="p-1.5 rounded-full hover:bg-gray-100 transition">
             <User className="text-gray-700" />
           </button>
