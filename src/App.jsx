@@ -1,22 +1,27 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import { Layout } from "./Layout/Layout";
+import Products from "./pages/Products/Products";
+import Recipes from "./pages/Recipes/Recipes";
+import NotFound from "./pages/NotFound/NotFound";
+import ProductsDetail from "./pages/Products/ProductsDetail";
+import RecipesDetail from "./pages/Recipes/RecipesDetail";
 
 const App = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products")
-      .then((res) => setData(res.data.products));
-  }, []);
   return (
-    <div>
-      {data.map((item) => (
-        <div>
-          <img src={item.images} alt="" />
-          <h1>{item.title}</h1>
-        </div>
-      ))}
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductsDetail />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/recipes/:id" element={<RecipesDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 
