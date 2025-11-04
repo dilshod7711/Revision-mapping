@@ -47,6 +47,19 @@ const ProductsDetail = () => {
             {data.availabilityStatus || "In Stock"}
           </p>
           <p className="text-xs text-gray-400">{data.warrantyInformation}</p>
+          <div className="flex items-center gap-3 bg-gray-100 px-4 py-2 rounded-full shadow-inner w-fit">
+            <button className="w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full hover:bg-red-600 active:scale-95 transition">
+              −
+            </button>
+
+            <span className="min-w-[170px] text-center font-semibold text-gray-700">
+              {data.price}
+            </span>
+
+            <button className="w-8 h-8 flex items-center justify-center bg-green-500 text-white rounded-full hover:bg-green-600 active:scale-95 transition">
+              +
+            </button>
+          </div>
 
           <div className="flex gap-4 mt-4">
             <button className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition font-semibold">
